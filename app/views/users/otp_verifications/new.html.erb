@@ -1,0 +1,15 @@
+<h1>OTP Verification</h1>
+
+<%= form_with url: users_otp_verifications_path, method: :post do %>
+  <%= hidden_field_tag :user_id, params[:user_id] %>
+
+  <div class="field">
+    <%= label_tag :otp %>
+    <%= text_field_tag :otp %>
+  </div>
+
+  <div class="actions">
+    <%= submit_tag "Verify OTP" %>
+    <%= button_to 'Resend OTP', resend_otp_path(user_id: params[:user_id]), method: :post %>
+  </div>
+<% end %>

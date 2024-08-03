@@ -22,6 +22,11 @@ gem 'jsonapi-serializer'
 gem "importmap-rails"
 
 gem 'rack-cors'
+gem 'twilio-ruby'
+
+gem 'dotenv-rails'
+
+gem 'pry'
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"

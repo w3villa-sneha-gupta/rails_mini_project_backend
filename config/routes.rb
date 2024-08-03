@@ -1,13 +1,16 @@
 Rails.application.routes.draw do
+  get 'dashboard/show'
   devise_for :users, controllers: {
     sessions: 'users/sessions',
     confirmations: 'users/confirmations',
-    registrations: 'users/registrations'
+    registrations: 'users/registrations',
   }
 
-  get 'otp/new', to: 'otps#new', as: :new_otp
-  post 'otp/verify', to: 'otps#verify', as: :verify_otp
-  post 'otp/resend', to: 'otps#resend', as: :resend_otp
+  get 'otp_verifications/new', to: 'users/otp_verifications#new', as: 'new_users_otp_verification'
+  post 'otp_verifications', to: 'users/otp_verifications#create', as: 'users_otp_verifications'
+  post 'otp_verifications/resend', to: 'users/otp_verifications#resend_otp', as: 'resend_otp'
+
+  get 'dashboard', to: 'dashboard#show', as: :dashboard
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
