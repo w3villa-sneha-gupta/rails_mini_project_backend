@@ -24,6 +24,13 @@ gem "importmap-rails"
 gem 'rack-cors'
 gem 'twilio-ruby'
 
+gem 'omniauth-rails_csrf_protection'
+
+
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-facebook'
+
 gem 'dotenv-rails'
 
 gem 'pry'

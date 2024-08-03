@@ -1,6 +1,6 @@
 class Users::OtpVerificationsController < ApplicationController
     skip_before_action :verify_authenticity_token
-  
+
     # GET /otp_verifications/new
     def new
       @user = User.find_by(id: params[:user_id])
@@ -29,17 +29,15 @@ class Users::OtpVerificationsController < ApplicationController
 
     def resend_otp
         @user = User.find_by(id: params[:user_id])
-        if @user
+        if @user&.otp_resend_allowed?
           @user.generate_otp
-          @user.save
-          UserMailer.with(user: @user).phone_otp.deliver_now
-          flash[:notice] = 'OTP has been resent to your phone number.'
-          redirect_to new_otp_verification_path(user_id: @user.id)
+          send_phone_otp(@user)
+          flash[:notice] = 'OTP resent successfully.'
         else
-          flash[:alert] = 'User not found'
-          redirect_to root_path
+          flash[:alert] = 'You can only request a new OTP every 1 minutes.'
         end
-    end
+        redirect_to otp_verification_path
+      end
   
     private
   

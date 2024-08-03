@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     sessions: 'users/sessions',
     confirmations: 'users/confirmations',
     registrations: 'users/registrations',
+    omniauth_callbacks: 'users/omniauth_callbacks' 
   }
 
   get 'otp_verifications/new', to: 'users/otp_verifications#new', as: 'new_users_otp_verification'
