@@ -1,8 +1,12 @@
-<h1>Welcome to Your Dashboard</h1>
+<div class="signup-form-container">
+<div> Welcome <%= current_user.email %> </div> 
 
 <p>You are logged in and your account is active.</p>
 
+
 <%= button_to "Sign out", destroy_user_session_path, method: :delete %> 
+
+
 
 
 <!-- Add more content as needed -->

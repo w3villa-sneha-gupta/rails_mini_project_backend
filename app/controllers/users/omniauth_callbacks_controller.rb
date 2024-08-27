@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
-  skip_before_action :verify_authenticity_token, only: [:google_oauth2, :facebook]
+  skip_before_action :verify_authenticity_token
   protect_from_forgery
 
   def google_oauth2
@@ -20,10 +20,14 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     if @user.persisted?
       sign_in_and_redirect @user, event: :authentication
       set_flash_message(:notice, :success, kind: kind) if is_navigational_format?
+      redirect_to after_sign_in_path_for(@user)
     else
       session["devise.#{kind.downcase}_data"] = request.env["omniauth.auth"]
       redirect_to new_user_registration_url
     end
+  end
+  def after_sign_in_path_for(resource)
+    dashboard_path # Replace with the actual path to your dashboard
   end
   # You should configure your model like this:
   # devise :omniauthable, omniauth_providers: [:twitter]

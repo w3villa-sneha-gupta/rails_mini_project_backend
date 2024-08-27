@@ -2,6 +2,6 @@ class DashboardController < ApplicationController
   before_action :authenticate_user!
 
   def show
-    # Dashboard logic goes here
+    @user = current_user  # Retrieve the current user
   end
 end

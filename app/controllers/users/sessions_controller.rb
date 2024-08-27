@@ -14,6 +14,9 @@ class Users::SessionsController < Devise::SessionsController
       redirect_to new_user_session_path
     end
   end
+
+
+  
   
   # before_action :configure_sign_in_params, only: [:create]
 
