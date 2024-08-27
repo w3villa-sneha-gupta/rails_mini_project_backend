@@ -4,6 +4,7 @@ class Users::SessionsController < Devise::SessionsController
 
   def create
     self.resource = warden.authenticate!(auth_options)
+    
     if resource.email_verified && resource.phone_verified
       set_flash_message!(:notice, :signed_in)
       sign_in(resource_name, resource)

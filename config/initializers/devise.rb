@@ -40,11 +40,6 @@ Devise.setup do |config|
   # available as additional gems.
   require 'devise/orm/active_record'
 
-  config.omniauth :google_oauth2, ENV['GOOGLE_CLIENT_ID'], ENV['GOOGLE_CLIENT_SECRET'],{
-    scope: 'email,profile',
-    prompt: 'select_account',
-    access_type: 'offline'
-  }
 
   config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_SECRET'], scope: 'email'
 

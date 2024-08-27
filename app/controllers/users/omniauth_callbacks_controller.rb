@@ -15,14 +15,23 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   private
 
   def handle_oauth(kind)
-    @user = User.from_omniauth(request.env["omniauth.auth"])
+    auth = request.env['omniauth.auth']
+    user = User.find_by(email: auth.info.email)
+    if user.present?
+      @user=user
+    else
+      @user = User.from_omniauth(request.env["omniauth.auth"])
+    end
+  
+    
+   
 
     if @user.persisted?
-      sign_in_and_redirect @user, event: :authentication
+      sign_in(@user)
       set_flash_message(:notice, :success, kind: kind) if is_navigational_format?
       redirect_to after_sign_in_path_for(@user)
     else
-      session["devise.#{kind.downcase}_data"] = request.env["omniauth.auth"]
+      session['devise.google_data'] = request.env['omniauth.auth'].except(:extra) 
       redirect_to new_user_registration_url
     end
   end
