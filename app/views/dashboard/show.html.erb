@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
   <div class="container-fluid">
   <div class="image-container">
   <%= image_tag Rails.application.routes.url_helpers.url_for(current_user.profile_picture), height: '30', width: '30', style: 'border-radius: 50%; border: solid white 1px;' %>
@@ -9,15 +9,15 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
         </li>
        
         <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Profile</a>
+          <a class="nav-link disabled text-white" href="#" tabindex="-1" aria-disabled="true">Profile</a>
         </li>
       </ul>
       <div class="">
-      <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
+      <%= button_to "Sign out", destroy_user_session_path, method: :delete, style:'border:none;background-color:#5b65ca' %>
       
        
       </div>
@@ -25,11 +25,17 @@
   </div>
 </nav>
 
+
+
       
      
 
-<div class="text-center d-flex justify-content-center flex-column align-items-center mt-4">
-<div> Welcome <%= current_user.email %> </div> 
+<div class="d-flex flex-column home-container">
+<div class="main-heading"> Welcome <%= current_user.email %> </div> 
+<div class="sub-heading">Millions of people are searching for jobs,<br/> salary information, company</br> reviews. Find the job that <br/>fits your abilities and </br> potential.</div>
+<div class="mt-4">
+<%= link_to 'Buy Premium', buy_premium_path, class: 'bg-button' %>
+</div>
 
 
 

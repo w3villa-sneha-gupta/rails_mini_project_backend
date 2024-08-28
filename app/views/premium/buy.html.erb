@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Buy Premium Plans</title>  
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <div class="container-fluid">
+  <div class="image-container">
+  <%= image_tag Rails.application.routes.url_helpers.url_for(current_user.profile_picture), height: '30', width: '30', style: 'border-radius: 50%; border: solid white 1px;' %>
+  </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+        </li>
+       
+        <li class="nav-item">
+          <a class="nav-link disabled text-white" href="#" tabindex="-1" aria-disabled="true">Profile</a>
+        </li>
+      </ul>
+      <div class="">
+      <%= button_to "Sign out", destroy_user_session_path, method: :delete, style:'border:none;background-color:#5b65ca' %>
+      
+       
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="container-box d-flex flex-column justify-content-center">
+<div class="slider-wrapper text-center">
+<h3 class="plan-heading">Choose your plan</h3>
+    <div class="card-list">
+        <div class="card-item">
+           
+            <h2 class="user-name">Basic Plan</h2>
+            <p class="user-profession">Distribute the cost over 10 days for greater flexibility.</p>
+
+            <p class="user-profession">Total Cost: $300</p>
+            <button class="message-button">Pay Now</button>
+        </div>
+       
+        <div class="card-item">
+           
+            <h2 class="user-name">Monthly Plan</h2>
+            <p class="user-profession">Distribute the cost over one month for greater flexibility.</p>
+            <p class="user-profession">Total Cost: $330</p>
+            <button class="message-button">Pay Now</button>
+        </div>
+      
+      
+        <div class="card-item">
+            
+            <h2 class="user-name">Extended Plan</h2>
+            <p class="user-profession">Distribute the cost over six months for greater flexibility.</p>
+            <p class="user-profession">Total Cost: $360</p>
+            <button class="message-button">Pay Now</button>
+        </div>
+    </div>
+   
+</div>
+</div>
+
+</body>
+</html>

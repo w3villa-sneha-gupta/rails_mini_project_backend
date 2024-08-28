@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'premium/buy'
   get 'dashboard/show'
   devise_for :users, controllers: {
     sessions: 'users/sessions',
@@ -12,6 +13,7 @@ Rails.application.routes.draw do
   post 'otp_verifications/resend', to: 'users/otp_verifications#resend_otp', as: 'resend_otp'
 
   get 'dashboard', to: 'dashboard#show', as: :dashboard
+  get 'buy_premium', to: 'premium#buy', as: 'buy_premium'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
