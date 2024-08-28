@@ -16,10 +16,11 @@
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Profile</a>
         </li>
       </ul>
-      <form class="d-flex">
-        <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "button-no-border" %> 
+      <div class="">
+      <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
+      
        
-      </form>
+      </div>
     </div>
   </div>
 </nav>
@@ -29,6 +30,7 @@
 
 <div class="text-center d-flex justify-content-center flex-column align-items-center mt-4">
 <div> Welcome <%= current_user.email %> </div> 
+
 
 
 
