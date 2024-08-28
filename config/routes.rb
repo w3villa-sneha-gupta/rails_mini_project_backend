@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'payments/new'
+  get 'payments/create'
   get 'dashboard/show'
   devise_for :users, controllers: {
     sessions: 'users/sessions',
@@ -21,6 +23,7 @@ Rails.application.routes.draw do
   root 'home#index'
   resource :dashboard, only: [:show] # Dashboard route
   resource :users, only: [:update, :edit]    # Handle user updates
+  resources :payments, only: [:new, :create]
   # Defines the root path route ("/")
   # root "posts#index"
 end

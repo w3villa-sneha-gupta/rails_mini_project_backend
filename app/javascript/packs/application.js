@@ -1,5 +1,5 @@
 
-import "bootstrap/scss/bootstrap";
+import "bootstrap/css/bootstrap";
 
 import { Turbo } from "@hotwired/turbo-rails";
 Turbo.start();

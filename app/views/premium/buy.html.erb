@@ -1,9 +1,13 @@
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
   <title>Buy Premium Plans</title>  
 </head>
 <body>
+<div class="box">
 <nav class="navbar navbar-expand-lg navbar-light bg-dark">
   <div class="container-fluid">
   <div class="image-container">
@@ -40,7 +44,7 @@
             <p class="user-profession">Distribute the cost over 10 days for greater flexibility.</p>
 
             <p class="user-profession">Total Cost: $300</p>
-            <button class="message-button">Pay Now</button>
+            <%= link_to 'Buy Basic', new_payment_path(plan: 'basic'), class: 'btn btn-primary' %>
         </div>
        
         <div class="card-item">
@@ -48,7 +52,7 @@
             <h2 class="user-name">Monthly Plan</h2>
             <p class="user-profession">Distribute the cost over one month for greater flexibility.</p>
             <p class="user-profession">Total Cost: $330</p>
-            <button class="message-button">Pay Now</button>
+             <%= link_to 'Buy Silver', new_payment_path(plan: 'silver'), class: 'btn btn-secondary' %>
         </div>
       
       
@@ -57,10 +61,11 @@
             <h2 class="user-name">Extended Plan</h2>
             <p class="user-profession">Distribute the cost over six months for greater flexibility.</p>
             <p class="user-profession">Total Cost: $360</p>
-            <button class="message-button">Pay Now</button>
+             <%= link_to 'Buy Diamond', new_payment_path(plan: 'diamond'), class: 'btn btn-warning' %>
         </div>
     </div>
    
+</div>
 </div>
 </div>
 

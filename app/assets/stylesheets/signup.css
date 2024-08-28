@@ -1,32 +1,40 @@
-body {
+
     
-  }
+
 
   .sign-up-wrap{
-    background-color: #f0f0f0; /* Change this to your desired background color */
+   /* Change this to your desired background color */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+  
     margin: 0;
     gap:5px;
 
   }
+
+  .sign-container{
+    /* background-image: url("https://img.freepik.com/free-photo/detail-purple-feather-textured-backdrop_23-2148114559.jpg?t=st=1724869964~exp=1724873564~hmac=726dcaff8ff96cdeaf1f7d13d20694104528d75dc5e04c07ed43ef48db2a3302&w=1380"); */
+    height:100vh;
+    background-size: cover;
+    background-color: black;
+  }
   
   .signup-form-container {
-    background-color: #ffffff;
-    padding: 21px;
+    background-color: #272727;
+    padding: 10px 21px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top:35px;
   }
   
   .signup-form-container h2 {
     text-align: center;
   }
   
-  .field {
+  /* .field {
     margin-bottom: 8px;
-  }
+  } */
   
   .actions {
     text-align: center;
@@ -53,9 +61,15 @@ body {
     justify-content: center;
   }
   
-  h1 {
-    color: #333333;
+  .border-blue{
+    border-color:#5b65ca;
+    background-color: #272727;
   }
+
+  .font-15{
+    font-size:13px;
+  }
+ 
 
   .container-box {
     width: 100%;
@@ -64,12 +78,12 @@ body {
     position: relative;
     height:calc(100vh-220px);
     align-items: center;
-}
+  }
 
 .slider-wrapper {
     position: relative;
     margin-top:40px;
-}
+  }
 
 .card-list {
     display: flex;
@@ -78,15 +92,24 @@ body {
     
     
     padding: 26px 0;
-}
+  }
 
 .plan-heading{
   color: #5b65ca;
 }
+.text-color{
+  color:#5b65ca !important;
+}
+.button-color{
+  background-color: #5b65ca;
+  border-radius: 10px;
+ 
+}
+
 
 .home-container{
   background-image: url("https://assets.ccbp.in/frontend/react-js/home-lg-bg.png");
-  height:99vh;
+  height:100vh;
   background-size: cover;
 }
 .main-heading {
@@ -199,6 +222,12 @@ color: #5b65ca !important;
     width: 100%;
     text-align: center;
 }
+.container-payment {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
 
 .swiper-pagination span {
     background: #007bff;
@@ -208,6 +237,85 @@ color: #5b65ca !important;
     width: 8px;
     margin: 0 3px;
 }
+.home-heading {
+  font-size: 30px;
+  font-family: 'Roboto';
+  font-weight: bold;
+  color: #fff;
+ 
+  color:white;
+  margin-left: 20px;
+}
+.sub-heading{
+  font-size: 20px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  color: #fff;
+  
+  color:white;
+  margin-left: 20px;
+}
 
+.bg-button{
+  background-color: #5b65ca;
+  color:white;
+  margin-left: 20px;
+  padding:10px;
+
+}
+
+.bg-home{
+
+  background-image: url("https://img.freepik.com/free-photo/smooth-elegant-transparent-blue-cloth-separated-blue-background_155003-1645.jpg?t=st=1724858294~exp=1724861894~hmac=5245a3909ff28cb7cd071a6b3d8ef5847cb0965d46b839f811fe450c6c267ca3&w=1380");
+  height:100vh;
+  background-size: cover;
+ 
+
+}
+
+.box{
+  background-image: url("https://img.freepik.com/free-vector/abstract-background_23-2148499378.jpg?t=st=1724861094~exp=1724864694~hmac=34d887196c1c998ff27b8d38e5ca2025b8f9780deffd7dcc8f860c174bdc1fd8&w=1380");
+  background-size: cover;
+  height:100vh;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+  .card-body {
+    text-align: center;
+  }
+
+  .card-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  .card-text {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+  }
+
+  &:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .col-md-4 {
+    flex: 1;
+    margin: 10px;
+  }
 
   
