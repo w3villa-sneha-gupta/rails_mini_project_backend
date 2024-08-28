@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   resource :dashboard, only: [:show] # Dashboard route
   resource :users, only: [:update, :edit]    # Handle user updates
   resources :payments, only: [:new, :create]
+  get 'payments/success', to: 'payments#success', as: 'payment_success'
   # Defines the root path route ("/")
   # root "posts#index"
 end

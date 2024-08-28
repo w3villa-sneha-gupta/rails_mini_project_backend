@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
   has_one_attached :profile_picture
 
+  has_many :subscriptions, dependent: :destroy
+
   def user_params
     params.require(:user).permit(:profile_picture, :other_attributes)
   end
