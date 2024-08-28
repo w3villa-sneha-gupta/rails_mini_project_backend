@@ -33,6 +33,23 @@ body {
     
   }
 
+  .button-no-border {
+    border: none;
+    background-color: transparent; 
+    color: inherit; 
+    cursor: pointer; 
+    padding: 0; 
+    
+    margin-right:10px; 
+  }
+
+  .image-container{
+    height:30px;
+    width:30px;
+    border-radius: 50px;
+    border:1px solid grey;
+  }
+
   .container {
     background-color: #ffffff; /* White container background */
     padding: 30px;
