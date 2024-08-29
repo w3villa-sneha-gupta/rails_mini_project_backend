@@ -66,6 +66,11 @@
     background-color: #272727;
   }
 
+  .blue-background{
+    background-color: #5b65ca;
+
+  }
+
   .font-15{
     font-size:13px;
   }
@@ -227,7 +232,8 @@ color: #5b65ca !important;
 .container-payment {
   max-width: 900px;
   margin: 0 auto;
-  padding-top: 40px;
+  height: 100vh;
+  padding-top: 293px;
 }
 
 
@@ -285,6 +291,7 @@ color: #5b65ca !important;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
+  
 }
   .card-body {
     text-align: center;
