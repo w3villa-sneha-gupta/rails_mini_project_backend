@@ -9,12 +9,12 @@
   <%= hidden_field_tag :user_id, params[:user_id],class:'text-white' %>
 
   <div class="actions">
-    <%= label_tag :otp,class:'text-white' %>
-    <%= text_field_tag :otp,class:'border-blue' %>
+    <%= label_tag :otp, class:'text-white' %><br/>
+    <%= text_field_tag :otp%>
   </div>
 
-  <div class="actions">
-    <%= submit_tag "Verify OTP",class:'text-white' %>
+  <div class="actions mt-4">
+    <%= submit_tag "Verify OTP",class:'text-white button-color' %>
     <%= button_to 'Resend OTP', resend_otp_path(user_id: params[:user_id]), method: :post ,class:'button-color text-white'%>
   </div>
 <% end %>
