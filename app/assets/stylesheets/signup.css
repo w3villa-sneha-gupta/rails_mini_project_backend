@@ -22,10 +22,10 @@
   
   .signup-form-container {
     background-color: #272727;
-    padding: 10px 21px;
+    padding: 74px 79px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top:35px;
+    margin-top:105px;
   }
   
   .signup-form-container h2 {
@@ -78,6 +78,8 @@
     position: relative;
     height:calc(100vh-220px);
     align-items: center;
+    margin-top: 118px;
+    margin-left: 312px;
   }
 
 .slider-wrapper {

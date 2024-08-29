@@ -1,15 +1,24 @@
-<h1>OTP Verification</h1>
+<div class="sign-container">
+<div class="sign-up-wrap">
+
+<div class="signup-form-container ">
+
+<h1 class="text-color">OTP Verification</h1>
 
 <%= form_with url: users_otp_verifications_path, method: :post do %>
-  <%= hidden_field_tag :user_id, params[:user_id] %>
+  <%= hidden_field_tag :user_id, params[:user_id],class:'text-white' %>
 
-  <div class="field">
-    <%= label_tag :otp %>
-    <%= text_field_tag :otp %>
+  <div class="actions">
+    <%= label_tag :otp,class:'text-white' %>
+    <%= text_field_tag :otp,class:'border-blue' %>
   </div>
 
   <div class="actions">
-    <%= submit_tag "Verify OTP" %>
-    <%= button_to 'Resend OTP', resend_otp_path(user_id: params[:user_id]), method: :post %>
+    <%= submit_tag "Verify OTP",class:'text-white' %>
+    <%= button_to 'Resend OTP', resend_otp_path(user_id: params[:user_id]), method: :post ,class:'button-color text-white'%>
   </div>
 <% end %>
+
+</div>
+</div>
+</div>
