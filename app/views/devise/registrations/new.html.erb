@@ -57,6 +57,7 @@
       Sign in with Facebook
     <% end %>
   </div>
+    <%= link_to 'Resend confirmation instructions', new_user_confirmation_path, class:"text-white" %>
     <div class="form-group text-center w-10 text-white">
      Already a User?<br/>
      <%= link_to "Sign in", new_user_session_path, class:'text-color' %>
