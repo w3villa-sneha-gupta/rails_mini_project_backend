@@ -3,6 +3,7 @@
 Name of the project:-Nxtrendz
 Functionality:-
 Home page
+<img src="./app/assets/images/home.png">
 
 
 
