@@ -1,8 +1,15 @@
 # README
 
 Name of the project:-Nxtrendz
+
+
 Functionality:-
+
+
+
 Home page
+
+
 In Home page I have added navbar with contain signup and sign in route which redirects to respective page
 
 
