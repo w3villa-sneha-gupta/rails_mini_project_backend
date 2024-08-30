@@ -59,6 +59,14 @@ dashboard page
 8.Profile picture upload
 
 <img src="./app/assets/images/profileimage.png">
+
+Course plan page
+
+.Basic plan
+.Silver plan
+.Platinum plan
+
+<img src="./app/assets/images/plan.png">
 9.Payment gateway using Stripe
 
 <img src="./app/assets/images/payment.png">
