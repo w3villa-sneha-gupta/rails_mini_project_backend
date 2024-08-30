@@ -1,24 +1,28 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Name of the project:-Nxtrendz
+Functionality:-
+Home page
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
 
-* Database creation
+1. Signup
 
-* Database initialization
 
-* How to run the test suite
+   
+2.Email verification (As confirmation link is send to the user's email)
+3.Phone verification through otp using Twilio
+Social login
 
-* Services (job queues, cache servers, search engines, etc.)
+4.Gmail login using Google auth
+5.Facebook login
 
-* Deployment instructions
+6.Sign in 
+7.Sign out
+8.Profile picture upload
+9.Payment gateway using Stripe
 
-* ...
+
+
